@@ -14,22 +14,26 @@
         <p>Want to speak out on a fake conference? Fill out this form.</p>
     </header>
 
-    <form action="" method="get" class="speaker-form">
+    <form action="#" method="get" class="speaker-form" novalidate>
 
         <div class="form-row">
-            <label for="full-name">Name</label>
-            <input type="text" id="full-name" name="full-name" placeholder="Amin Mahfuz">
+            <label for="full-name">Name<span> *</span>
+            </label>
+            <input type="text" id="full-name" name="full-name" placeholder="Amin Mahfuz" minlength="3" required>
         </div>
 
         <div class="form-row">
-            <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email" placeholder="you@example.com">
+            <label for="email">EMAIL <span> *</span></label>
+            <div>
+                <input type="email" name="email" id="email" placeholder="you@example.com" required>
+                <span class="errorBox" aria-live="polite"></span>
+            </div>
         </div>
 
         <fieldset class="legacy-form-row">
-            <legend>Type of Talk</legend>
+            <legend>Type of Talk<span> *</span></legend>
 
-            <input type="radio" name="talk-type" id="talk-type-1" value="main-stage">
+            <input type="radio" name="talk-type" id="talk-type-1" value="main-stage" required>
             <label for="talk-type-1" class="radio-label">Main Stage</label>
 
             <input type="radio" name="talk-type" id="talk-type-2" value="workshop">
@@ -39,9 +43,9 @@
 
         <div class="form-row">
 
-            <label for="t-shirt">T<span>-</span>SHIRT SIZE</label>
+            <label for="t-shirt">T<span>-</span>SHIRT SIZE<span> *</span></label>
 
-            <select name="t-shirt" id="t-shirt">
+            <select name="t-shirt" id="t-shirt" required>
                 <option value="xs">Extra Small</option>
                 <option value="s">Small</option>
                 <option value="m">Medium</option>
@@ -51,7 +55,7 @@
 
         <div class="form-row">
             <label for="abstact">Abstract</label>
-            <textarea name="abstact" id="abstract"></textarea>
+            <textarea name="abstact" id="abstract" minlength="10" maxlength="150"></textarea>
             <div class="instruction">Describe your talk in 500 words or less.</div>
         </div>
 
@@ -69,5 +73,6 @@
 
     </form>
 </body>
+<script src="./script.js"></script>
 
 </html>

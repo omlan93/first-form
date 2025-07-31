@@ -93,14 +93,16 @@ p {
     font-size: 1rem;
     padding: 0.5em;
     font-family: century_schoolbook;
+    display: inline;
 }
 
-.form-row input[type="text"]:invalid,
-.form-row input[type="email"]:invalid {
+
+
+.form-row input[type="text"]:user-invalid,
+.form-row input[type="email"]:user-invalid {
     border: 1px solid #d55c5f;
     color: #d55c5f;
     box-shadow: none;
-    /*Remove default red glow in Firefox*/
 }
 
 .form-row label {
@@ -108,7 +110,8 @@ p {
     margin-bottom: 1rem;
 }
 
-.form-row label>span {
+.form-row label>span,
+legend>span {
     -webkit-appearance: none;
     font-family: sans-serif;
 }
@@ -187,6 +190,18 @@ p {
     font-family: century_schoolbook;
 }
 
+.form-row input[type="email"]+span {
+    background-color: #ff5c5f;
+    display: block;
+    color: white;
+}
+
+.form-row input[type="email"]+span.active {
+    padding: 0.3rem;
+}
+
+
+
 @media only screen and (min-width: 700px) {
 
     .speaker-form-header,
@@ -244,6 +259,4 @@ p {
     .form-row button {
         margin-left: 120px;
     }
-
-
 }
