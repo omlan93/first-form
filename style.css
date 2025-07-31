@@ -108,6 +108,10 @@ p {
     margin-bottom: 1rem;
 }
 
+.form-row label>span {
+    font-family: sans-serif;
+}
+
 .legacy-form-row {
     border: none;
     margin-bottom: calc((40/16)*1rem);
@@ -121,17 +125,41 @@ p {
 
 .legacy-form-row input[type="radio"] {
     margin-top: 2px;
-    margin-right: 0.2rem;
+    margin-right: 0.1rem;
 }
 
 .legacy-form-row .radio-label {
-    margin-right: 1rem;
+    margin-right: 0.2rem;
 }
 
 .legacy-form-row .radio-label,
 .legacy-form-row input[type='radio'] {
     float: left;
 
+}
+
+.form-row select {
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+    font-family: century_schoolbook;
+    border: 1px solid #D6D9DC;
+}
+
+.form-row textarea {
+    font-size: 1.2rem;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    min-height: 12.5rem;
+    margin-bottom: 10px;
+    resize: none;
+    width: 70%;
+}
+
+.form-row .instruction {
+    color: #999999;
+
+    margin-bottom: 1.875rem;
 }
 
 @media only screen and (min-width: 700px) {
@@ -163,10 +191,20 @@ p {
     .legacy-form-row .radio-label,
     .legacy-form-row input[type="radio"] {
         float: left;
+        margin-right: 0.2rem;
+    }
+
+    .legacy-form-row .radio-label {
+        margin-right: 1rem;
     }
 
     .legacy-form-row legend {
         float: left;
+    }
+
+    .form-row .instruction {
+        margin-left: 7.5rem;
+        font-size: 1.2rem;
     }
 
 }
