@@ -109,6 +109,7 @@ p {
 }
 
 .form-row label>span {
+    -webkit-appearance: none;
     font-family: sans-serif;
 }
 
@@ -147,6 +148,7 @@ p {
 }
 
 .form-row textarea {
+    -webkit-appearence: none;
     font-size: 1.2rem;
     border: 1px solid #D6D9DC;
     border-radius: 3px;
